@@ -1,0 +1,58 @@
+﻿body {
+}
+
+#zoneList li {
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em 2em;
+    *padding: .4em;
+    margin: .5em 0;
+    background: #ddd;
+    color: #444;
+    text-decoration: none;
+    border-radius: .3em;
+    transition: all ease-out;
+    list-style: none;
+    counter-increment: zoneList;
+}
+
+#zoneList li:hover{
+    background: #eee;
+}
+
+#zoneList li:before {
+        content: counter(zoneList);
+        
+        position: absolute;
+        left: -1.1em;
+        top: 50%;
+        margin-top: -1.3em;
+        background: #87ceeb;
+        height: 2em;
+        width: 2em;
+        line-height: 2em;
+        border: .3em solid #fff;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 2em;
+        transition: all .3s ease-out;
+}
+
+#zoneList:empty{
+    display:none
+}
+
+#zoneList li:after {
+    position: absolute;
+    content: '';
+    border: .5em solid transparent;
+    left: -1em;
+    top: 50%;
+    margin-top: -.5em;
+    transition: all .3s ease-out;
+}
+
+.rectangle-list li:hover:after {
+    left: -.5em;
+    border-left-color: #fa8072;
+}
